@@ -4,7 +4,7 @@ from keras.models import load_model, clone_model
 
 class AgentDQN():
     def __init__(self, gamma, actions_count, model, experience_replay = None, update_steps = 1000,
-                 epsilon = 1.0, epsilon_dec = 1e-5, epsilon_min = 0.01,
+                 epsilon = 1.0, epsilon_dec = 1e-3, epsilon_min = 0.01,
                  batch_size = 32, name = 'model.h5'):
         self.gamma = gamma
         self.actions_count = actions_count
